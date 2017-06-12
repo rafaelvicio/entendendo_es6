@@ -1,0 +1,27 @@
+// ES5
+
+var alunos = [
+    {nome: 'Rafael', idade: 20},
+    {nome: 'Filype', idade: 17},
+    {nome: 'Maria', idade: 18}
+]
+
+var todosAlunosDeMaior = true;
+for(var i=0; i < alunos.length; i++){
+    if(alunos[i].idade < 18) {
+        todosAlunosDeMaior = false;
+        break;
+    }
+}
+
+// ES6
+
+var alunos = [
+    {nome: 'Rafael', idade: 20},
+    {nome: 'Filype', idade: 17},
+    {nome: 'Maria', idade: 18}
+]
+
+var todosAlunosDeMaior = alunos.every(function(aluno){
+    return aluno.idade >= 18;
+})
